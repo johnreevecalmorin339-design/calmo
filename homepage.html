@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Home</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #0f172a; color: white; }
+        nav {
+            background: #111827; padding: 20px 8%; display: flex;
+            justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
+        }
+        .logo { font-size: 25px; font-weight: bold; color: #38bdf8; }
+        nav ul { display: flex; list-style: none; gap: 22px; flex-wrap: wrap; }
+        nav ul li a { color: white; text-decoration: none; font-size: 16px; }
+        nav ul li a:hover { color: #38bdf8; }
+        .hero {
+            min-height: 78vh; display: flex; justify-content: center;
+            align-items: center; text-align: center; padding: 30px 20px;
+        }
+        .hero h1 { font-size: clamp(36px, 7vw, 56px); margin-bottom: 20px; }
+        .hero h1 span { color: #38bdf8; }
+        .hero p { color: #cbd5e1; font-size: 18px; line-height: 1.7; margin-bottom: 30px; }
+        .btn {
+            display: inline-block; padding: 12px 25px; background: #38bdf8;
+            color: #0f172a; text-decoration: none; border-radius: 6px; font-weight: bold;
+        }
+        .btn:hover { background: #0ea5e9; }
+        .about { padding: 45px 20px; text-align: center; background: #111827; }
+        .about h2 { color: #38bdf8; margin-bottom: 15px; }
+        .about p { color: #cbd5e1; line-height: 1.7; }
+        footer { padding: 20px; text-align: center; color: #94a3b8; background: #0b1120; }
+        @media (max-width: 600px) {
+            nav { padding: 18px 5%; }
+            nav ul { gap: 14px; }
+            nav ul li a { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">TechStore</div>
+        <ul>
+            <li><a href="techstore_homepage.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Welcome to <span>TechStore</span></h1>
+            <p>Your online store for modern and reliable<br>technology products.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About TechStore</h2>
+        <p>Welcome to TechStore! This is our homepage where you can learn more about our website and services.</p>
+    </section>
+
+    <footer id="contact">
+        <p>Contact: johnreevecalmorin@gmail.com</p>
+        <p style="margin-top: 8px;">&copy; 2026 TechStore. All rights reserved.</p>
+    </footer>
+</body>
+</html>
