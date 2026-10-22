@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Products</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #111827;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #00c8ff;
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #00c8ff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #00c8ff;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #00c8ff;
+        }
+
+        .product-icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            color: #00c8ff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00c8ff;
+            color: #0f172a;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        #cart-message {
+            text-align: center;
+            color: #00c8ff;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TechStore</h1>
+    <nav>
+        <a href="firstpe.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Our Products</h2>
+
+    <div id="cart-message">Items added: 0</div>
+
+    <div class="products">
+
+        <div class="product-card">
+            <img src="compu.jpg.jpg" alt="Computer" width="150">
+            <h3>Laptop</h3>
+            <p class="description">Portable computer for work and study.</p>
+            <p class="price">₱35,000</p>
+            <button class="btn" onclick="addToCart('Laptop')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="phone.jpg" alt="Computer" width="150">
+            <h3>Smartphone</h3>
+            <p class="description">Mobile phone for everyday use.</p>
+            <p class="price">₱12,000</p>
+            <button class="btn" onclick="addToCart('Smartphone')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="phone.jpg" width="150">
+            <h3>Headphones</h3>
+            <p class="description">Enjoy music with clear sound.</p>
+            <p class="price">₱1,500</p>
+            <button class="btn" onclick="addToCart('Headphones')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+         <img src="key.jpg"Computer" width="150">
+            <h3>Keyboard</h3>
+            <p class="description">Comfortable keyboard for typing.</p>
+            <p class="price">₱1,200</p>
+            <button class="btn" onclick="addToCart('Keyboard')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+           <img src="mouse.jpg"Computer" width="150">
+            <h3>Computer Mouse</h3>
+            <p class="description">Mouse for smooth computer navigation.</p>
+            <p class="price">₱650</p>
+            <button class="btn" onclick="addToCart('Computer Mouse')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="moni.jpg"Computer" width="150">
+            <h3>Monitor</h3>
+            <p class="description">Display for your desktop computer.</p>
+            <p class="price">₱8,500</p>
+            <button class="btn" onclick="addToCart('Monitor')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+       <img src="speaker.jpg"Computer" width="150
+            <h3>Speakers</h3>
+            <p class="description">Speakers for music and entertainment.</p>
+            <p class="price">₱1,800</p>
+            <button class="btn" onclick="addToCart('Speakers')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+           <img src="web.jpg" alt="Computer" width="150">
+            <h3>Webcam</h3>
+            <p class="description">Camera for online classes and meetings.</p>
+            <p class="price">₱2,000</p>
+            <button class="btn" onclick="addToCart('Webcam')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+         <img src="flash.jpg" alt="Computer" width="150">
+            <h3>USB Flash Drive</h3>
+            <p class="description">Portable storage for your files.</p>
+            <p class="price">₱350</p>
+            <button class="btn" onclick="addToCart('USB Flash Drive')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="power.jpg" alt="Computer" width="150">
+            <h3>Power Bank</h3>
+            <p class="description">Portable charger for mobile devices.</p>
+            <p class="price">₱950</p>
+            <button class="btn" onclick="addToCart('Power Bank')">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 TechStore. All Rights Reserved.</p>
+</footer>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart(productName) {
+        cartCount++;
+
+        document.getElementById("cart-message").textContent =
+            "Items added: " + cartCount;
+
+        alert(productName + " added to cart!");
+    }
+</script>
+
+</body>
+</html>
