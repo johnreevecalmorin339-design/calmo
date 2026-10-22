@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechStore - Contact Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #111827;
+            padding: 20px 12px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #00c8ff;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00c8ff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 15px;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #00c8ff;
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 20px;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: #1e293b;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            min-width: 0;
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            color: #00c8ff;
+            margin-bottom: 18px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .info-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            background: #0f172a;
+            color: white;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #00c8ff;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #00c8ff;
+            color: #0f172a;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        #message {
+            margin-top: 12px;
+            color: #00c8ff;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 30px;
+            color: #cbd5e1;
+            font-size: 13px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            header {
+                padding: 18px 10px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .container {
+                padding: 25px 12px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TechStore</h1>
+
+    <nav>
+        <a href="firstpe.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <h2>Contact Us</h2>
+
+    <p class="intro">
+        Have questions or need assistance?
+        Send us a message using the form below.
+    </p>
+
+    <div class="contact-wrapper">
+
+        <section class="contact-info">
+            <h3>Get in Touch</h3>
+
+            <div class="info-item">
+                <strong>📍 Address</strong>
+                <span>Enter your business address here</span>
+            </div>
+
+            <div class="info-item">
+                <strong>📧 Email</strong>
+                <span>your-email@example.com</span>
+            </div>
+
+            <div class="info-item">
+                <strong>📞 Phone</strong>
+                <span>Enter your contact number</span>
+            </div>
+
+            <div class="info-item">
+                <strong>🕒 Business Hours</strong>
+                <span>Monday - Saturday</span><br>
+                <span>8:00 AM - 5:00 PM</span>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h3>Send a Message</h3>
+
+            <form id="contactForm">
+
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="subject">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Enter subject"
+                    required
+                >
+
+                <label for="userMessage">Message</label>
+                <textarea
+                    id="userMessage"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+                <p id="message" role="status"></p>
+
+            </form>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 TechStore. All Rights Reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("contactForm").addEventListener(
+        "submit",
+        function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+
+            document.getElementById("message").textContent =
+                "Thank you, " + name +
+                "! Your form was completed, but no message has been sent yet.";
+
+            this.reset();
+        }
+    );
+</script>
+
+</body>
+</html>
